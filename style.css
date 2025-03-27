@@ -9,16 +9,27 @@ body {
 }
 .hero {
     display: flex;
+    flex-wrap: nowrap; /* Запрещаем перенос элементов на новую строку */
     align-items: center;
-    justify-content: space-between;
+    justify-content: center;
     gap: 20px;
 }
+/* Контейнер с фото и текстом */
+.hero .photo-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px; /* Отступ между фото и текстом */
+    flex: 1;
+}
 
+/* Стили для фото */
 .hero img {
-    max-width: 45%; /* Устанавливаем ширину фото */
+    max-width: 45%; /* Ограничиваем ширину фото */
     height: auto;
 }
 
+/* Стили для текста */
 .hero .text {
     max-width: 50%;
     text-align: left;
@@ -465,20 +476,25 @@ input[type="text"]:focus {
     }
 
  .hero {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
+        flex-direction: column; /* Элементы остаются в строке, не переходят в столбец */
+        flex-wrap: wrap;
     }
 
-    /* Фото и текст остаются горизонтальными, но уменьшаются */
+    .hero .photo-text {
+        flex-direction: row; /* Устанавливаем горизонтальное расположение */
+        justify-content: space-between;
+        width: 100%;
+    }
+
     .hero img {
-        max-width: 48%; /* Уменьшаем ширину для мобильных устройств */
-        height: auto;
+        max-width: 45%; /* Фотографии остаются в горизонтальном виде */
     }
 
     .hero .text {
-        max-width: 48%; /* Уменьшаем ширину для текста */
+        max-width: 50%;
+        text-align: left;
     }
+}
 
 
     .wedding-title {
