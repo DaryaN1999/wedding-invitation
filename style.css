@@ -1,4 +1,3 @@
-
 body {
     background-color: #1c1c1c; /* Темно-серый фон */
     color: #ffffff; /* Белый текст */
@@ -7,7 +6,6 @@ body {
     margin: 0;
     padding: 0;
 }
-
 .hero h1 {
     font-size: 50px; /* Увеличиваем размер цифры */
     color: #ffffff; /* Цвет цифры */
@@ -444,22 +442,34 @@ input[type="text"]:focus {
 }
 
 @media screen and (max-width: 768px) {
-    
+    body {
+        padding: 0 10px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero h3 {
+        font-size: 20px;
+    }
+
     .wedding-title {
         font-size: 60px;
         letter-spacing: 10px;
     }
 
- /* Стили для .text */
-    .text {
-        width: 100%; /* Текст будет занимать всю ширину блока */
-        text-align: center;
-    }
-}
-    .photo-grid img {
-        max-width: 48%; /* Чтобы фото не выходили за пределы */
+    .photo-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+        padding: 10px;
     }
 
+    .photo-grid img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
 
     .countdown-box {
         font-size: 1.5rem;
@@ -499,6 +509,10 @@ input[type="text"]:focus {
         max-width: 80%;
     }
 
+    .hero .text, .countdown-box, .survey, .photo-grid img {
+        animation-delay: 1s;
+    }
+
     .confirm-btn, .cancel-btn {
         font-size: 16px;
         padding: 10px 20px;
@@ -525,10 +539,7 @@ input[type="text"]:focus {
 
     /* Стили для расписания */
     .schedule {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        width: 100%;
+        padding: 10px;
     }
 
     .event {
@@ -536,9 +547,6 @@ input[type="text"]:focus {
         flex-direction: column;
         align-items: center;
         text-align: center;
-        width: 90%;
-        max-width: 400px;
-        margin-bottom: 15px;
     }
 
     .event .time {
@@ -549,6 +557,7 @@ input[type="text"]:focus {
     .event .details {
         font-size: 16px;
     }
+}
     
 
 
