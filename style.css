@@ -210,6 +210,16 @@ h1, h2, h3 {
     transform: scale(1.1);
 }
 
+#firework {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    animation: fireworkAnimation 2s ease-out forwards;
+}
+
 .survey {
     background: rgba(255, 255, 255, 0.1);
     padding: 30px;
@@ -344,6 +354,56 @@ h3:last-of-type {
     font-family: 'TildaSans-R', sans-serif;
 }
 
+#firework {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    animation: fireworkAnimation 2s ease-out forwards;
+}
+@keyframes fireworkAnimation {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+        box-shadow: 0 0 20px 5px rgba(255, 255, 0, 0.8);
+    }
+    50% {
+        box-shadow: 0 0 50px 20px rgba(255, 255, 0, 0.6);
+    }
+    100% {
+        transform: scale(5);
+        opacity: 0;
+        box-shadow: 0 0 100px 30px rgba(255, 255, 0, 0);
+    }
+}
+@media screen and (max-width: 768px) {
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .survey {
+        padding: 20px;
+    }
+
+    .survey h2 {
+        font-size: 22px;
+    }
+
+    .survey button {
+        padding: 8px 15px;
+        font-size: 16px;
+    }
+
+    .menu h2 {
+        font-size: 22px;
+    }
+
+    .menu p {
+        font-size: 16px;
+    }
+}
 .line {
     border-top: 1px solid #d0bc6e; /* Цвет и толщина линии */
     margin-top: 5px; /* Отступ сверху */
@@ -359,7 +419,69 @@ h3 + .line {
 }
 /* Ваши существующие стили */
 
+@media screen and (max-width: 768px) {
+    .photo-grid {
+        grid-template-columns: 1fr;
+    }
 
+    .survey {
+        padding: 20px;
+    }
+
+    .survey h2 {
+        font-size: 22px;
+    }
+
+    .survey button {
+        padding: 8px 15px;
+        font-size: 16px;
+    }
+
+    .menu h2 {
+        font-size: 22px;
+    }
+
+    .menu p {
+        font-size: 16px;
+    }
+
+    /* Дополнительные улучшения */
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .hero h2 {
+        font-size: 36px;
+    }
+
+    .countdown-box {
+        font-size: 1.5rem;
+    }
+
+    .survey .question {
+        margin-bottom: 15px;
+        font-size: 16px;
+    }
+
+    .survey button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+
+    .photo-grid {
+        grid-template-columns: 1fr;
+        padding: 10px;
+    }
+
+    .menu h2 {
+        font-size: 20px;
+    }
+
+    .menu p {
+        font-size: 16px;
+    }
+}
 
 /* Стиль для поля ввода имени */
 input[type="text"] {
@@ -439,124 +561,6 @@ input[type="text"]:focus {
     color: #ffffff;
     margin-bottom: 10px;     /* Плотное межстрочное расстояние, как в дресс-коде */
     line-height: 1.2;
-}
-
-@media screen and (max-width: 768px) {
-    body {
-        padding: 0 10px;
-    }
-
-    .hero h1 {
-        font-size: 40px;
-    }
-
-    .hero h3 {
-        font-size: 20px;
-    }
-
-    .wedding-title {
-        font-size: 60px;
-        letter-spacing: 10px;
-    }
-
-    .photo-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-        padding: 10px;
-    }
-
-    .photo-grid img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 8px;
-    }
-
-    .countdown-box {
-        font-size: 1.5rem;
-    }
-
-    .survey {
-        padding: 20px;
-    }
-
-    .survey h2 {
-        font-size: 20px;
-    }
-
-    .survey .question {
-        font-size: 16px;
-        margin-bottom: 15px;
-    }
-
-    .survey button {
-        padding: 10px 18px;
-        font-size: 16px;
-    }
-
-    .menu h2 {
-        font-size: 18px;
-    }
-
-    .menu p {
-        font-size: 14px;
-    }
-
-    .quote-section blockquote {
-        font-size: 20px;
-    }
-
-    .quote-photo {
-        max-width: 80%;
-    }
-
-    .hero .text, .countdown-box, .survey, .photo-grid img {
-        animation-delay: 1s;
-    }
-
-    .confirm-btn, .cancel-btn {
-        font-size: 16px;
-        padding: 10px 20px;
-    }
-
-    .info {
-        text-align: center;
-        margin: 20px 0;
-        padding: 15px;
-        background-color: #2e2e2e;
-        border-radius: 10px;
-    }
-
-    .info h2 {
-        font-size: 20px;
-        color: #d0bc6e;
-    }
-
-    .info p {
-        font-size: 16px;
-        color: #ffffff;
-        line-height: 1.2;
-    }
-
-    /* Стили для расписания */
-    .schedule {
-        padding: 10px;
-    }
-
-    .event {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-
-    .event .time {
-        font-size: 18px;
-        margin-bottom: 5px;
-    }
-
-    .event .details {
-        font-size: 16px;
-    }
 }
     
 
