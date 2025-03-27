@@ -562,3 +562,111 @@ input[type="text"]:focus {
     margin-bottom: 10px;     /* Плотное межстрочное расстояние, как в дресс-коде */
     line-height: 1.2;
 }
+/* Добавьте медиазапросы в конце */
+@media screen and (max-width: 768px) {
+    body {
+        padding: 0 10px;
+    }
+
+    .hero h1 {
+        font-size: 40px;
+    }
+
+    .hero h3 {
+        font-size: 20px;
+    }
+
+    .wedding-title {
+        font-size: 60px;
+        letter-spacing: 10px;
+    }
+
+    .photo-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .photo-grid img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+    }
+
+    .countdown-box {
+        font-size: 1.5rem;
+    }
+
+    .survey h2 {
+        font-size: 20px;
+    }
+
+    .survey .question {
+        font-size: 16px;
+    }
+
+    .survey button {
+        padding: 10px 18px;
+        font-size: 16px;
+    }
+
+    .menu h2 {
+        font-size: 18px;
+    }
+
+    .menu p {
+        font-size: 14px;
+    }
+
+    .quote-section blockquote {
+        font-size: 20px;
+    }
+
+    .quote-photo {
+        max-width: 80%;
+    }
+
+    .hero .text, .countdown-box, .survey, .photo-grid img {
+        animation-delay: 1s;
+    }
+
+    .confirm-btn, .cancel-btn {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .info h2 {
+        font-size: 20px;
+    }
+
+    .info p {
+        font-size: 16px;
+    }
+}
+
+/* Для планшетов и средних экранов */
+@media screen and (max-width: 1024px) {
+    .photo-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .survey {
+        padding: 25px;
+    }
+
+    .survey h2 {
+        font-size: 22px;
+    }
+
+    .survey button {
+        padding: 10px 20px;
+        font-size: 18px;
+    }
+
+    .menu h2 {
+        font-size: 20px;
+    }
+
+    .menu p {
+        font-size: 16px;
+    }
+}
