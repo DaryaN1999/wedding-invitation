@@ -1,8 +1,4 @@
-body, html {
-    width: 100%;
-    max-width: 100%;
-    overflow-x: hidden;
-}
+
 body {
     background-color: #1c1c1c; /* Темно-серый фон */
     color: #ffffff; /* Белый текст */
