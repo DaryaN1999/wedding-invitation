@@ -7,6 +7,22 @@ body {
     margin: 0;
     padding: 0;
 }
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.hero img {
+    max-width: 45%; /* Устанавливаем ширину фото */
+    height: auto;
+}
+
+.hero .text {
+    max-width: 50%;
+    text-align: left;
+}
 .hero h1 {
     font-size: 50px; /* Увеличиваем размер цифры */
     color: #ffffff; /* Цвет цифры */
@@ -448,32 +464,34 @@ input[type="text"]:focus {
         overflow-x: hidden;
     }
 
-.hero {
-        flex-direction: row; /* Горизонтальное расположение */
+ .hero {
+        display: flex;
+        flex-wrap: wrap; /* Чтобы элементы могли располагаться друг под другом, если не помещаются */
         justify-content: space-between;
         align-items: center;
-        gap: 20px;
     }
 
+    /* Фото и текст остаются горизонтальными, но уменьшаются */
     .hero img {
-        max-width: 45%; /* Устанавливаем ширину изображения на мобильных устройствах */
+        max-width: 48%; /* Уменьшаем ширину для мобильных устройств */
         height: auto;
     }
 
     .hero .text {
-        max-width: 50%;
-        text-align: left;
+        max-width: 48%; /* Уменьшаем ширину для текста */
     }
+
 
     .wedding-title {
         font-size: 60px;
         letter-spacing: 10px;
     }
 
-   .photo-grid {
+    .photo-grid {
         display: flex;
-        flex-wrap: wrap; /* Разрешаем перенос элементов */
+        flex-wrap: wrap;
         justify-content: space-between;
+        gap: 10px;
     }
     
  /* Стили для .text */
@@ -483,10 +501,9 @@ input[type="text"]:focus {
     }
 }
     .photo-grid img {
-        max-width: 100%;
-        height: auto;
-        border-radius: 8px;
+        max-width: 48%; /* Чтобы фото не выходили за пределы */
     }
+
 
     .countdown-box {
         font-size: 1.5rem;
