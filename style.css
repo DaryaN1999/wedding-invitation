@@ -210,16 +210,6 @@ h1, h2, h3 {
     transform: scale(1.1);
 }
 
-#firework {
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-    animation: fireworkAnimation 2s ease-out forwards;
-}
-
 .survey {
     background: rgba(255, 255, 255, 0.1);
     padding: 30px;
@@ -362,21 +352,6 @@ h3:last-of-type {
     transform: translate(-50%, -50%);
     z-index: 10;
     animation: fireworkAnimation 2s ease-out forwards;
-}
-@keyframes fireworkAnimation {
-    0% {
-        transform: scale(0);
-        opacity: 1;
-        box-shadow: 0 0 20px 5px rgba(255, 255, 0, 0.8);
-    }
-    50% {
-        box-shadow: 0 0 50px 20px rgba(255, 255, 0, 0.6);
-    }
-    100% {
-        transform: scale(5);
-        opacity: 0;
-        box-shadow: 0 0 100px 30px rgba(255, 255, 0, 0);
-    }
 }
 @media screen and (max-width: 768px) {
     .photo-grid {
@@ -682,6 +657,57 @@ body {
 .hero, .menu, .survey {
     width: 1024px;
     margin: 0 auto;
+}
+/* Для секции расписания */
+# wedding-schedule {
+    max-width: 1024px; /* Ограничиваем ширину для секции */
+    margin: 0 auto; /* Центрируем */
+    padding: 20px; /* Добавляем отступы для лучшего отображения */
+}
+
+/* Для каждого события */
+.schedule .event {
+    display: flex; /* Используем flexbox для выравнивания */
+    justify-content: space-between; /* Разделяем время и детали на обе стороны */
+    margin-bottom: 20px; /* Добавляем отступы между событиями */
+}
+
+/* Время */
+.schedule .event .time {
+    width: 120px; /* Фиксируем ширину времени */
+    text-align: center; /* Центрируем время */
+    font-size: 16px;
+}
+
+/* Детали события */
+.schedule .event .details {
+    flex-grow: 1; /* Позволяет разделу details расширяться */
+    margin-left: 20px; /* Отступ между временем и деталями */
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+/* Обработка длинных адресов */
+.schedule .event .address {
+    font-size: 14px;
+    color: #888;
+}
+
+/* Для адаптации на мобильных устройствах (если нужно сделать изменения) */
+@media screen and (max-width: 768px) {
+    .schedule .event {
+        flex-direction: column; /* На мобильных устройствах выводим элементы по вертикали */
+        text-align: center; /* Центрируем текст */
+    }
+
+    .schedule .event .time {
+        width: 100%; /* Время занимает всю строку */
+        margin-bottom: 10px; /* Отступ от текста */
+    }
+
+    .schedule .event .details {
+        width: 100%; /* Детали также занимают всю ширину */
+    }
 }
 
 img {
