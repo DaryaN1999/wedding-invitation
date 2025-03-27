@@ -437,6 +437,19 @@ input[type="text"]:focus {
     margin-bottom: 10px;     /* Плотное межстрочное расстояние, как в дресс-коде */
     line-height: 1.2;
 }
-    
+    /* Отключаем адаптацию под мобильные устройства */
+@media screen and (max-width: 768px) {
+    .photo-grid {
+        display: flex; /* Меняем grid на flex */
+        flex-wrap: nowrap; /* Запрещаем перенос */
+        justify-content: center; /* Центрируем */
+        gap: 10px;
+    }
+
+    .photo-grid img {
+        max-width: 50%; /* Чтобы оба элемента были равными */
+        height: auto;
+    }
+}
 
 
