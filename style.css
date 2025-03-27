@@ -344,15 +344,6 @@ h3:last-of-type {
     font-family: 'TildaSans-R', sans-serif;
 }
 
-#firework {
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-    animation: fireworkAnimation 2s ease-out forwards;
-}
 @media screen and (max-width: 768px) {
     .photo-grid {
         grid-template-columns: 1fr;
@@ -650,7 +641,7 @@ input[type="text"]:focus {
     }
 }
 body {
-    width: 1024px; /* Устанавливаем фиксированную ширину */
+    width: 768px; /* Устанавливаем фиксированную ширину */
     margin: 0 auto; /* Центрируем */
 }
 
@@ -660,7 +651,7 @@ body {
 }
 /* Для секции расписания */
 # wedding-schedule {
-    max-width: 1024px; /* Ограничиваем ширину для секции */
+    max-width: 768px; /* Ограничиваем ширину для секции */
     margin: 0 auto; /* Центрируем */
     padding: 20px; /* Добавляем отступы для лучшего отображения */
 }
@@ -674,7 +665,7 @@ body {
 
 /* Время */
 .schedule .event .time {
-    width: 120px; /* Фиксируем ширину времени */
+    width: 100px; /* Фиксируем ширину времени */
     text-align: center; /* Центрируем время */
     font-size: 16px;
 }
@@ -701,16 +692,16 @@ body {
     }
 
     .schedule .event .time {
-        width: 100%; /* Время занимает всю строку */
+        width: 70%; /* Время занимает всю строку */
         margin-bottom: 10px; /* Отступ от текста */
     }
 
     .schedule .event .details {
-        width: 100%; /* Детали также занимают всю ширину */
+        width: 70%; /* Детали также занимают всю ширину */
     }
 }
 
 img {
-    max-width: 100%;
+    max-width: 70%;
     height: auto;
 }
