@@ -39,7 +39,7 @@ body {
 .wedding-title {
     font-family: 'TildaSans-R', serif; /* Подключаем шрифт */
     font-weight: normal; /* Легкий шрифт */
-    font-size: 70px; /* Размер */
+    font-size: 60px; /* Размер */
     letter-spacing: 15px; /* Немного увеличим расстояние между буквами */
     color: #d0bc6e; /* Цвет желтый */
     text-align: center;
@@ -148,14 +148,14 @@ h1, h2, h3 {
 }
 
 .number {
-    font-size: 70px !important; /* Большие цифры */
+    font-size: 55px !important; /* Большие цифры */
     font-weight: normal;
     color: #d0bc6e;
     margin-bottom: 5px; /* Отступ между цифрой и текстом */
 }
 
 .text {
-    font-size: 25px !important; /* Уменьшаем текст под цифрами */
+    font-size: 15px !important; /* Уменьшаем текст под цифрами */
     color: #d0bc6e;
     line-height: 1; /* Межстрочный интервал */
     margin-top: 5px; /* Отступ от цифры */
