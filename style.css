@@ -444,42 +444,12 @@ input[type="text"]:focus {
 }
 
 @media screen and (max-width: 768px) {
-    body {
-        padding: 0 10px;
-        overflow-x: hidden;
-    }
-
-  .hero {
-        flex-direction: column;
-    }
-
-    .photo-text {
-        flex-direction: row; /* Оставляем горизонтальное расположение */
-        flex-wrap: nowrap; /* Запрещаем перенос на новую строку */
-        justify-content: center;
-        align-items: center;
-        gap: 10px;
-    }
-
-    .photo-text img, 
-    .photo-text .text {
-        max-width: 50%; /* Фото и текст занимают половину экрана */
-    }
-
-
-
+    
     .wedding-title {
         font-size: 60px;
         letter-spacing: 10px;
     }
 
-    .photo-grid {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 10px;
-    }
-    
  /* Стили для .text */
     .text {
         width: 100%; /* Текст будет занимать всю ширину блока */
