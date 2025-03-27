@@ -1,6 +1,7 @@
-html, body {
-    touch-action: manipulation; /* Улучшает масштабирование */
-    overflow-x: hidden; /* Убирает горизонтальную прокрутку */
+body, html {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
 }
 body {
     background-color: #1c1c1c; /* Темно-серый фон */
@@ -562,7 +563,7 @@ input[type="text"]:focus {
     .event .details {
         font-size: 16px;
     }
-.container {
+.container, .wrapper, .content {
     max-width: 100%;
     width: 90%;
     margin: 0 auto;
