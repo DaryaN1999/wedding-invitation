@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Приглашение на свадьбу</title>
+    <link href="https://fonts.googleapis.com/css2?family=TildaSans-R&family=Patriciana&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <style>
+        /* Применяем стиль для текста меню, как в информационном блоке */
+        .menu {
+            font-family: 'TildaSans-L', sans-serif;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        .fadeIn {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .countdown-box {
+            color: beige;
+            text-align: center;
+            font-size: 2rem;
+        }
+        .countdown {
+            display: inline-flex;
+            gap: 10px;
+        }
+        .countdown span {
+            font-size: 4rem;
+            display: block;
+        }
+        .hero h2 {
+            font-family: 'TildaSans-R', serif;
+            font-size: 50px;
+            font-weight: 10;
+            align-items: center;
+        }
+        .schedule {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: rgba(192, 189, 173, 0.8);
+        }
+        .event {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 10px;
+        }
+        .time {
+            font-weight: bold;
+            text-align: right;
+            width: 200px;
+        }
+        .details {
+            width: 400px;
+            font-family: 'TildaSans-L', sans-serif;
+            line-height: 1.6;
+            color: rgb(255, 255, 255); /* Основной цвет текста */
+        }
+        .line {
+            border-top: 2px solid #d0bc6e;
+            margin: 10px 0;
+        }
+        .address {
+        color: rgb(106, 105, 104); /* Замените на нужный цвет */
+        }
+        .text{
+        font-family: "Tildasans-L",  sans-serif;
+        font-weight: normal;
+        }
+        .dress-code {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .dress-code p {
+            font-size: 18px;
+            margin-bottom: 15px;
+        }
+        .color-circles {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        .color-circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            border: 2px solid #fff;
+        }
+        .color1 { background-color: #f0e1d2; } /* Пример пастельного цвета */
+        .color2 { background-color: #e1d7f0; }
+        .color3 { background-color: #d2f0e1; }
+        .color4 { background-color: #f0d2e1; }
+        .color5 { background-color: #f0f1d2; }
+    </style>
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+</head>
+<body style="font-family: 'TildaSans-L', sans-serif;">
+    <section class="hero">
+        <div class="container">
+            <div class="photo-grid">
+                <img src="photo1.jpg" alt="Фото 1" class="fadeIn">
+                <div class="text">
+                    <div class="line"></div>
+                    <h3>август<h3>
+                    <h1>30</h1>
+                    <h3>2025 год<h3>
+                    <div class="line"></div>
+                </div>
+                <div class="text" style="color: #d0bc6e; text-align: center;">
+                    <h2 class="wedding-title">Наша<br>свадьба</h2>
+                </div>
+                <img src="photo2.jpg" alt="Фото 2" class="fadeIn">
+                <img src="photo3.jpg" alt="Фото 3" class="fadeIn">
+                <div class="text" style="color: #ffffff; text-align: center;">
+                    <div class="line"></div>
+                    <h3>Дарья</h3>
+                    <h3>&</h3>
+                    <h3>Дмитрий</h3>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+            
+            <div class="countdown-box">
+                <div class="countdown">
+                    <div class="countdown-item">
+                        <span class="number" id="weeks">00</span>
+                        <span class="text">недель</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="number" id="days">00</span>
+                        <span class="text">дней</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="number" id="hours">00</span>
+                        <span class="text">часов</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="number" id="minutes">00</span>
+                        <span class="text">минут</span>
+                    </div>
+                    <div class="countdown-item">
+                        <span class="number" id="seconds">00</span>
+                        <span class="text">секунд</span>
+                    </div>
+                </div>
+            </div>
+                    
+    </section>
+    
+    <section class="info">
+        <h2>Дорогой Гость!</h2>
+        <p>Мы рады сообщить Вам, что
+        30.08.2025 состоится самое </p>
+        <p>главное торжество в нашей жизни -
+        день нашей свадьбы!</p>
+        <p>Приглашаем Вас разделить с нами
+        радость этого незабываемого дня.</p>
+        <h3 style="color: #ffffff;">30.08.2025 в 16:30</h3>
+    </section>
+
+    <section class="quote-section">
+        <img src="wedding-photo.jpg" alt="Фото пары" class="quote-photo fadeIn">
+        <blockquote>
+            "Любить - значит вместе смотреть в одном<br>направлении!"
+        </blockquote>
+    </section>
+    
+    <section class="menu">
+        <h2>Меню</h2>
+        <p>Меню разнообразно, поэтому сообщите нам заранее,</p>
+        <p>если у Вас есть
+        какие-либо предпочтения или диетические ограничения.
+        <p>После подтверждения вы сможете пройти опрос</p>
+        <p> о своих вкусовых предпочтениях и напитках.</p>
+    </section>
+    
+    <!-- Секция дресс-кода -->
+<section class="dress-code">
+    <h2>Дресс-код на свадьбе</h2>
+    <p>Мы хотим, чтобы наш особенный день</p> 
+    <p>был не только прекрасным, но и гармоничным.</p>
+    <p>Просим всех гостей выбрать наряды в пастельных тонах,
+    <p>чтобы создать атмосферу нежности и утонченности.</p>
+    <p>Пусть каждый из Вас почувствует себя частью</p>
+    <p>этой красоты и радости!
+    </p>
+    <div class="color-circles">
+        <div class="color-circle color1"></div>
+        <div class="color-circle color2"></div>
+        <div class="color-circle color3"></div>
+        <div class="color-circle color4"></div>
+        <div class="color-circle color5"></div>
+    </div>
+</section>
+
+
+<section class="confirmation">
+    <h2>Подтверждение</h2>
+    <p>Пожалуйста, подтвердите свое присутствие до 01.08.2025</p>
+    <h2>Ждём Вас!</h2>
+    <label for="guestName">Ваше имя:</label>
+    <input type="text" id="guestName" name="guestName" required>
+    <p><button id="confirm-button" class="confirm-btn">Подтвердить</button></p>
+
+    <!-- Сообщение благодарности -->
+    <div id="confirmation-message" class="hidden">
+        <p>Спасибо, что подтвердили свое присутствие!<br>Дмитрий и Дарья уже оповещены об этом ;)</p>
+        <button id="cancel-button" class="cancel-btn">Отменить подтверждение</button>
+    </div>
+</section>
+
+<!-- Скрипт -->
+<script>
+// Получаем элементы
+const nameInput = document.getElementById('guestName');
+const confirmButton = document.getElementById('confirm-button');
+
+// Логика для проверки ввода имени
+nameInput.addEventListener('input', function() {
+    if (nameInput.value.trim() === "") {
+        nameInput.setAttribute('placeholder', 'Пожалуйста, введите ваше имя');  // Меняем текст placeholder
+        nameInput.style.borderColor = 'red';  // Красная рамка
+        confirmButton.disabled = true;      // Делаем кнопку неактивной
+    } else {
+        nameInput.setAttribute('placeholder', 'Введите ваше имя');  // Восстанавливаем исходный текст placeholder
+        nameInput.style.borderColor = '';  // Сбрасываем красную рамку
+        confirmButton.disabled = false;     // Активируем кнопку
+    }
+});
+
+// Функция для запуска эффектного конфетти
+function launchConfetti() {
+    let end = Date.now() + 3 * 1000; // Длительность 3 секунды
+
+    function frame() {
+        confetti({
+            particleCount: 7,
+            angle: 60,
+            spread: 100,
+            startVelocity: 50,
+            origin: { x: 0 }
+        });
+
+        confetti({
+            particleCount: 7,
+            angle: 120,
+            spread: 100,
+            startVelocity: 50,
+            origin: { x: 1 }
+        });
+
+        confetti({
+            particleCount: 5,
+            spread: 80,
+            startVelocity: 40,
+            origin: { x: Math.random(), y: Math.random() }
+        });
+
+        if (Date.now() < end) {
+            requestAnimationFrame(frame);
+        }
+    }
+
+    frame();
+}
+
+// Логика для подтверждения
+document.getElementById('confirm-button')?.addEventListener('click', function() {
+    let name = nameInput.value.trim();
+    let messageBox = document.getElementById("confirmation-message");
+    let thankYouMessage = messageBox?.querySelector("p");
+
+    // Если имя не введено, подсвечиваем поле ввода красным
+    if (!name) {
+        nameInput.setAttribute('placeholder', 'Введите имя');  // Текст ошибки в placeholder
+        nameInput.style.borderColor = 'red';  // Красная рамка
+        return;  // Прерываем выполнение, чтобы не продолжать
+    }
+
+    // Обновляем сообщение благодарности с именем
+    thankYouMessage.innerHTML = `Спасибо, ${name}, что подтвердили свое присутствие!<br>Дмитрий и Дарья уже оповещены об этом ;)`;
+
+    // Показываем окно с благодарностью
+    messageBox?.classList.remove('hidden');
+    
+    // Показываем кнопку отмены подтверждения
+    document.getElementById('cancel-button')?.classList.remove('hidden');
+    
+    // Скрываем кнопку подтверждения
+    confirmButton.classList.add('hidden');
+    
+    // Показываем форму опроса
+    document.getElementById('survey')?.classList.remove('hidden');
+
+    // 🎉 Запускаем конфетти после подтверждения
+    launchConfetti();
+});
+
+// Логика для отмены подтверждения
+document.getElementById('cancel-button')?.addEventListener('click', function() {
+    // Скрываем окно с благодарностью и форму опроса
+    document.getElementById('confirmation-message')?.classList.add('hidden');
+    document.getElementById('survey')?.classList.add('hidden');
+    
+    // Скрываем кнопку отмены подтверждения
+    document.getElementById('cancel-button')?.classList.add('hidden');
+    
+    // Показываем кнопку подтверждения
+    confirmButton.classList.remove('hidden');
+});
+</script>
+
+        <!-- Скрытое окно с опросом -->
+        <div id="survey" class="hidden">
+            <form>
+                <section class="survey">
+                    <h2>Опрос</h2>
+                    <!-- Вопрос 1 -->
+                    <div class="question">
+                        <p>Ваши предпочтения в еде?</p>
+                        <label>
+                            <input type="radio" name="food" value="no"> Нет
+                        </label>
+                        <label>
+                            <input type="radio" name="food" value="no eat meat"> Не ем мясо
+                        </label>
+                        <label>
+                            <input type="radio" name="food" value="no eat fish"> Не ем рыбу
+                        </label>
+                        <label>
+                            <input type="radio" name="food" value="vegetarian"> Вегетарианец
+                        </label>
+                    </div>
+                    
+                    <!-- Вопрос 2 -->
+                    <div class="question">
+                        <p>Ваши предпочтения в алкоголе?</p>
+                        <label>
+                            <input type="radio" name="alcohol" value="wine_white"> Вино белое
+                        </label>
+                        <label>
+                            <input type="radio" name="alcohol" value="wine_red"> Вино красное
+                        </label>
+                        <label>
+                            <input type="radio" name="alcohol" value="champagne"> Шампанское
+                        </label>
+                        <label>
+                            <input type="radio" name="alcohol" value="whisky"> Виски
+                        </label>
+                        <label>
+                            <input type="radio" name="alcohol" value="vodka"> Водка
+                        </label>
+                        <label>
+                            <input type="radio" name="alcohol" value="none"> Не буду пить алкоголь
+                        </label>
+                    </div>
+                
+                    <button type="submit">Отправить</button>
+                </section>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        // Обновление отсчета времени до свадьбы
+        function updateCountdown() {
+            var weddingDate = new Date("2025-08-30T16:30:00");
+            var now = new Date();
+            var timeLeft = weddingDate - now;
+
+            var weeks = Math.floor(timeLeft / (1000 * 60 * 60 * 24 * 7));
+            var days = Math.floor((timeLeft % (1000 * 60 * 60 * 24 * 7)) / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+
+            document.getElementById('weeks').innerText = String(weeks).padStart(2, '0');
+            document.getElementById('days').innerText = String(days).padStart(2, '0');
+            document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+            document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
+        }
+
+        setInterval(updateCountdown, 1000);
+    </script>
+      <!-- Свадебное расписание -->
+      <section id="wedding-schedule" class="schedule">
+        <h2>Свадебное расписание</h2>
+        <div class="event">
+            <div class="time">16:30<br>30.08.2025</div>
+            <div class="details"><strong>Сбор гостей. Фуршет<br>Энергетиков, 50а</strong><br><span class="address">Приглашаем вас разделить вместе с нами радость создания новой семьи.</span></div>
+        </div>
+        <div class="event">
+            <div class="time">17:00<br>30.08.2025</div>
+            <div class="details"><strong>Церемония</strong><br><span class="address">Вы станете свидетелями трогательного момента. Приготовьте платочки.</span></div>
+        </div>
+        <div class="event">
+            <div class="time">18:00<br>30.08.2025</div>
+            <div class="details"><strong>Банкет</strong><br><span class="address">Время вкусной еды, танцев и развлечений!</span></div>
+        </div>
+    </section>
+</body>
+</html>
+
