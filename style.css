@@ -592,9 +592,5 @@ input[type="text"]:focus {
     .event .details {
         font-size: 16px;
     }
-.container, .wrapper, .content {
-    max-width: 100%;
-    width: 90%;
-    margin: 0 auto;
-}
+
 
