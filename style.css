@@ -641,17 +641,17 @@ input[type="text"]:focus {
     }
 }
 body {
-    width: 768px; /* Устанавливаем фиксированную ширину */
+    width: 1024px; /* Устанавливаем фиксированную ширину */
     margin: 0 auto; /* Центрируем */
 }
 
 .hero, .menu, .survey {
-    width: 768px;
+    width: 1024px;
     margin: 0 auto;
 }
 /* Для секции расписания */
 # wedding-schedule {
-    max-width: 768px; /* Ограничиваем ширину для секции */
+    max-width: 1024px; /* Ограничиваем ширину для секции */
     margin: 0 auto; /* Центрируем */
     padding: 20px; /* Добавляем отступы для лучшего отображения */
 }
