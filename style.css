@@ -210,16 +210,6 @@ h1, h2, h3 {
     transform: scale(1.1);
 }
 
-#firework {
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-    animation: fireworkAnimation 2s ease-out forwards;
-}
-
 .survey {
     background: rgba(255, 255, 255, 0.1);
     padding: 30px;
@@ -354,56 +344,6 @@ h3:last-of-type {
     font-family: 'TildaSans-R', sans-serif;
 }
 
-#firework {
-    display: none;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: 10;
-    animation: fireworkAnimation 2s ease-out forwards;
-}
-@keyframes fireworkAnimation {
-    0% {
-        transform: scale(0);
-        opacity: 1;
-        box-shadow: 0 0 20px 5px rgba(255, 255, 0, 0.8);
-    }
-    50% {
-        box-shadow: 0 0 50px 20px rgba(255, 255, 0, 0.6);
-    }
-    100% {
-        transform: scale(5);
-        opacity: 0;
-        box-shadow: 0 0 100px 30px rgba(255, 255, 0, 0);
-    }
-}
-@media screen and (max-width: 768px) {
-    .photo-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .survey {
-        padding: 20px;
-    }
-
-    .survey h2 {
-        font-size: 22px;
-    }
-
-    .survey button {
-        padding: 8px 15px;
-        font-size: 16px;
-    }
-
-    .menu h2 {
-        font-size: 22px;
-    }
-
-    .menu p {
-        font-size: 16px;
-    }
-}
 .line {
     border-top: 1px solid #d0bc6e; /* Цвет и толщина линии */
     margin-top: 5px; /* Отступ сверху */
@@ -416,71 +356,6 @@ h3 + .line {
 }
 .address {
     color: rgb(196, 187, 152); /* Замените на нужный цвет */
-}
-/* Ваши существующие стили */
-
-@media screen and (max-width: 768px) {
-    .photo-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .survey {
-        padding: 20px;
-    }
-
-    .survey h2 {
-        font-size: 22px;
-    }
-
-    .survey button {
-        padding: 8px 15px;
-        font-size: 16px;
-    }
-
-    .menu h2 {
-        font-size: 22px;
-    }
-
-    .menu p {
-        font-size: 16px;
-    }
-
-    /* Дополнительные улучшения */
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    .hero h2 {
-        font-size: 36px;
-    }
-
-    .countdown-box {
-        font-size: 1.5rem;
-    }
-
-    .survey .question {
-        margin-bottom: 15px;
-        font-size: 16px;
-    }
-
-    .survey button {
-        padding: 10px 20px;
-        font-size: 16px;
-    }
-
-    .photo-grid {
-        grid-template-columns: 1fr;
-        padding: 10px;
-    }
-
-    .menu h2 {
-        font-size: 20px;
-    }
-
-    .menu p {
-        font-size: 16px;
-    }
 }
 
 /* Стиль для поля ввода имени */
