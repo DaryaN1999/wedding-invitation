@@ -7,33 +7,36 @@ body {
     margin: 0;
     padding: 0;
 }
+/* Основные стили */
 .hero {
     display: flex;
-    flex-wrap: nowrap; /* Запрещаем перенос элементов на новую строку */
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 20px;
 }
-/* Контейнер с фото и текстом */
-.hero .photo-text {
+
+/* Группируем фото и текст в блоки */
+.photo-text {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 20px; /* Отступ между фото и текстом */
-    flex: 1;
+    gap: 20px;
+    width: 100%;
 }
 
-/* Стили для фото */
-.hero img {
-    max-width: 45%; /* Ограничиваем ширину фото */
+/* Ограничиваем размер фото */
+.photo-text img {
+    max-width: 45%;
     height: auto;
 }
 
-/* Стили для текста */
-.hero .text {
-    max-width: 50%;
-    text-align: left;
+/* Текст */
+.photo-text .text {
+    max-width: 45%;
+    text-align: center;
 }
+
 .hero h1 {
     font-size: 50px; /* Увеличиваем размер цифры */
     color: #ffffff; /* Цвет цифры */
@@ -475,26 +478,23 @@ input[type="text"]:focus {
         overflow-x: hidden;
     }
 
- .hero {
-        flex-direction: column; /* Элементы остаются в строке, не переходят в столбец */
-        flex-wrap: wrap;
+  .hero {
+        flex-direction: column;
     }
 
-    .hero .photo-text {
-        flex-direction: row; /* Устанавливаем горизонтальное расположение */
-        justify-content: space-between;
-        width: 100%;
+    .photo-text {
+        flex-direction: row; /* Оставляем горизонтальное расположение */
+        flex-wrap: nowrap; /* Запрещаем перенос на новую строку */
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
     }
 
-    .hero img {
-        max-width: 45%; /* Фотографии остаются в горизонтальном виде */
+    .photo-text img, 
+    .photo-text .text {
+        max-width: 50%; /* Фото и текст занимают половину экрана */
     }
 
-    .hero .text {
-        max-width: 50%;
-        text-align: left;
-    }
-}
 
 
     .wedding-title {
@@ -608,5 +608,6 @@ input[type="text"]:focus {
     .event .details {
         font-size: 16px;
     }
+    
 
 
