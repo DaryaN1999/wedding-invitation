@@ -452,22 +452,22 @@ input[type="text"]:focus {
         overflow-x: hidden;
     }
 
-       .hero {
+.hero {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
-        text-align: left;
+        flex-direction: row; /* Размещаем элементы в ряд (фото + текст) */
+        align-items: center; /* Выравниваем по центру */
+        justify-content: center; /* Центрируем по горизонтали */
+        gap: 15px; /* Добавляем расстояние между фото и текстом */
     }
 
     .hero img {
-        max-width: 40%;
+        max-width: 40%; /* Уменьшаем фото, чтобы текст помещался */
         height: auto;
     }
 
     .hero .text {
-        max-width: 50%;
+        max-width: 50%; /* Ограничиваем ширину текста */
+        text-align: left; /* Оставляем текст выровненным по левому краю */
     }
 
     .wedding-title {
