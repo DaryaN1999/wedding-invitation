@@ -646,7 +646,7 @@ body {
 }
 
 .hero, .menu, .survey {
-    width: 1024px;
+    width: 768px;
     margin: 0 auto;
 }
 /* Для секции расписания */
@@ -692,16 +692,16 @@ body {
     }
 
     .schedule .event .time {
-        width: 70%; /* Время занимает всю строку */
+        width: 100%; /* Время занимает всю строку */
         margin-bottom: 10px; /* Отступ от текста */
     }
 
     .schedule .event .details {
-        width: 70%; /* Детали также занимают всю ширину */
+        width: 100%; /* Детали также занимают всю ширину */
     }
 }
 
 img {
-    max-width: 70%;
+    max-width: 100%;
     height: auto;
 }
