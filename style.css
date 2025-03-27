@@ -449,19 +449,19 @@ input[type="text"]:focus {
     }
 
 .hero {
-        flex-direction: row; /* Элементы будут в одну строку (горизонтально) */
+        flex-direction: row; /* Горизонтальное расположение */
         justify-content: space-between;
         align-items: center;
         gap: 20px;
     }
 
     .hero img {
-        max-width: 45%; /* Устанавливаем ширину изображения на мобильных */
+        max-width: 45%; /* Устанавливаем ширину изображения на мобильных устройствах */
         height: auto;
     }
 
     .hero .text {
-        max-width: 50%; /* Текст не будет слишком широким */
+        max-width: 50%;
         text-align: left;
     }
 
@@ -470,12 +470,18 @@ input[type="text"]:focus {
         letter-spacing: 10px;
     }
 
-    .photo-grid {
-        grid-template-columns: 1fr;
-        gap: 15px;
-        padding: 10px;
+   .photo-grid {
+        display: flex;
+        flex-wrap: wrap; /* Разрешаем перенос элементов */
+        justify-content: space-between;
     }
-
+    
+ /* Стили для .text */
+    .text {
+        width: 100%; /* Текст будет занимать всю ширину блока */
+        text-align: center;
+    }
+}
     .photo-grid img {
         max-width: 100%;
         height: auto;
