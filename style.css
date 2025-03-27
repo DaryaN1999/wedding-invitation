@@ -665,7 +665,7 @@ body {
 
 /* Время */
 .schedule .event .time {
-    width: 100px; /* Фиксируем ширину времени */
+    width: 120px; /* Фиксируем ширину времени */
     text-align: center; /* Центрируем время */
     font-size: 16px;
 }
@@ -701,7 +701,3 @@ body {
     }
 }
 
-img {
-    max-width: 100%;
-    height: auto;
-}
