@@ -1,3 +1,446 @@
+body {
+    background-color: #1c1c1c; /* Темно-серый фон */
+    color: #ffffff; /* Белый текст */
+    font-family: 'Playfair Display', normal;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+.hero h1 {
+    font-size: 50px; /* Увеличиваем размер цифры */
+    color: #ffffff; /* Цвет цифры */
+    margin: 0;
+}
+
+.hero h3 {
+    font-family: 'Patriciana', serif; /* Используем красивый шрифт */
+    font-size: 25px; /* Устанавливаем размер */
+    font-weight: normal; /* Легкий шрифт */
+    color: #ffffff; /* Цвет желтый */
+    margin: 0;
+    line-height: 1.2; /* Настройка межстрочного расстояния */
+}
+
+.hero h3:first-child {
+    margin-bottom: 5px; /* Уменьшаем отступ снизу для "Дарья" */
+}
+
+.hero h3:nth-child(2) {
+    margin-top: 5px; /* Отступ сверху для "и" */
+    margin-bottom: 5px; /* Убираем лишнее расстояние между "и" и "Дмитрий" */
+}
+
+.hero h3:last-child {
+    margin-top: 5px; /* Уменьшаем отступ сверху для "Дмитрий" */
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Lora:wght@100&display=swap');
+
+.wedding-title {
+    font-family: 'TildaSans-R', serif; /* Подключаем шрифт */
+    font-weight: normal; /* Легкий шрифт */
+    font-size: 70px; /* Размер */
+    letter-spacing: 15px; /* Немного увеличим расстояние между буквами */
+    color: #d0bc6e; /* Цвет желтый */
+    text-align: center;
+    margin: 0;
+}
+
+h1, h2, h3 {
+    font-family: "Tildasans-R", normal;
+    margin-bottom: 5px;
+    color: #d0bc6e; /* Бежевый цвет заголовков */
+}
+
+/* Анимация для появления текста */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Применим анимацию к заголовкам и блокам */
+.hero .text, .countdown-box, .survey {
+    transform: scale(1.5); /* Начальное приближение */
+    opacity: 0;
+    animation: photoAppear 1.5s ease-out forwards;
+}
+
+/* Блок героической секции */
+
+.photo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    max-width: 700px;
+    margin: auto;
+    align-items: center;
+}
+
+.photo-grid img {
+    width: 100%;
+    max-width: 330px;
+    height: auto;
+    border-radius: 10px;
+    transform: scale(1.5); /* Начальное приближение */
+    opacity: 0;
+    animation: photoAppear 1.5s ease-out forwards;
+}
+
+@keyframes photoAppear {
+    0% {
+        transform: scale(1.5); /* Фото увеличенное */
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1); /* Фото встает на место */
+        opacity: 1;
+    }
+}
+
+.photo-grid .text {
+    font-size: 15px;
+    font-weight: normal;
+    color: #ffffff; /* Белый текст */
+    text-align: center;
+    padding: 10px;
+}
+.text-animate {
+    transform: scale(1.3);
+    opacity: 0;
+    animation: textAppear 1.5s ease-out forwards;
+}
+
+@keyframes textAppear {
+    0% {
+        transform: scale(1.3);
+        opacity: 0;
+    }
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Блок таймера */
+.countdown-box {
+    color: beige;
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 10px; /* Добавляем отступ сверху */
+}
+
+.countdown {
+    display: flex;
+    justify-content: center; /* Центрируем по горизонтали */
+    gap: 40px; /* Пространство между элементами */
+}
+
+.countdown-item {
+    display: flex;
+    flex-direction: column; /* Вертикальное расположение текста и цифр */
+    align-items: center; /* Центрируем элементы */
+}
+
+.number {
+    font-size: 70px !important; /* Большие цифры */
+    font-weight: normal;
+    color: #d0bc6e;
+    margin-bottom: 5px; /* Отступ между цифрой и текстом */
+}
+
+.text {
+    font-size: 25px !important; /* Уменьшаем текст под цифрами */
+    color: #d0bc6e;
+    line-height: 1; /* Межстрочный интервал */
+    margin-top: 5px; /* Отступ от цифры */
+}
+/* Таймер появится с задержкой после фото и текста */
+.countdown-box {
+    opacity: 0;
+    transform: translateY(0);
+    animation: countdownAppear 1s ease-out forwards;
+    animation-delay: 1.8s; /* Задержка, чтобы дождаться анимации фото и текста */
+}
+
+@keyframes countdownAppear {
+    0% {
+        opacity: 0;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Стили для формы опроса */
+.hidden {
+    display: none;
+}
+
+#confirmation-message {
+    background-color: #dedcd2;
+    padding: 20px;
+    border-radius: 10px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 18px;
+    color: #000000;
+}
+
+#cancel-button {
+    background-color: #d0bc6e;
+    color: #1c1c1c;
+    padding: 10px 20px;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+#cancel-button:hover {
+    background-color: #d0bc6e;
+    transform: scale(1.1);
+}
+
+.survey {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 10px;
+    max-width: 600px;
+    margin: 50px auto;
+}
+
+.survey h2 {
+    color: #d0bc6e; /* Бежевый заголовок */
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.survey .question {
+    margin-bottom: 20px;
+    font-size: 18px;
+    text-align: left;
+}
+
+.survey .question p {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.survey .question label {
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.survey .question input[type="radio"] {
+    margin-right: 20px;
+    accent-color: #d0bc6e; /* Цвет для радио-кнопок */
+}
+
+.survey button {
+    margin-top: 20px;
+    background-color: #d0bc6e;
+    color: #1c1c1c;
+    border: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: 0.3s;
+    font-family: 'Patriciana', serif; /* Используем красивый шрифт */
+    text-transform: uppercase; /* Буквы на кнопке большие */
+}
+
+.survey button:hover {
+    background-color: #d0bc6e;
+    transform: scale(1.1); /* Немного увеличиваем кнопку */
+}
+
+/* Стили для кнопки подтверждения */
+.confirm-btn {
+    background-color: #d0bc6e;
+    color: #1c1c1c;
+    border: none;
+    padding: 15px 30px;
+    font-size: 20px;
+    cursor: pointer;
+    border-radius: 10px;
+    transition: 0.3s;
+    font-family: 'Patriciana', serif;
+    text-transform: uppercase;
+}
+
+.confirm-btn:hover {
+    background-color: #d0bc6e;
+    transform: scale(1.1);
+}
+
+h3 {
+    color: #ffffff; /* Белый цвет для имен Дарьи и Дмитрия */
+    font-family: 'Patriciana', serif;
+}
+
+h3 + h3 {
+    margin: 5px 0; /* Разделение между именами */
+}
+
+h3:last-of-type {
+    margin-top: 10px;
+}
+
+/* Стили для секции цитаты */
+.quote-section {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.quote-section blockquote {
+    font-size: 24px;
+    font-style: italic;
+    margin: 20px auto;
+    color: #d0bc6e;
+    width: 70%;
+    font-family: 'Patriciana', normal;
+}
+
+.quote-photo {
+    width: 50%; /* Уменьшаем ширину изображения до 50% */
+    max-width: 400px; /* Ограничиваем максимальную ширину фото */
+    border-radius: 10px;
+    margin: 20px auto;
+}
+
+/* Стили для секции меню */
+.menu {
+    text-align: center;
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 10px;
+    background-color: #2e2e2e;
+}
+
+.menu h2 {
+    font-size: 22px;
+    margin-bottom: 10px; /* уменьшен отступ */
+    color: #d0bc6e;
+    font-family: 'TildaSans-R', sans-serif;
+}
+
+.menu p {
+    font-size: 18px;
+    margin-bottom: 10px; /* уменьшен отступ, как в дресс-коде */
+    line-height: 1.2;    /* немного плотнее, чем стандартно */
+    color: #ffffff;
+    font-family: 'TildaSans-R', sans-serif;
+}
+
+.line {
+    border-top: 1px solid #d0bc6e; /* Цвет и толщина линии */
+    margin-top: 5px; /* Отступ сверху */
+    margin-bottom: 5px; /* Отступ снизу */
+    display: inline-block; /* Линия будет растягиваться только по ширине текста */
+    width: 50%; /* Линия будет по ширине текста */
+}
+h3 + .line {
+    margin-top: 20px; /* Убедитесь, что линии после заголовков "Дмитрий" тоже имеют отступ */
+}
+.address {
+    color: rgb(196, 187, 152); /* Замените на нужный цвет */
+}
+/* Ваши существующие стили */
+
+
+
+/* Стиль для поля ввода имени */
+input[type="text"] {
+    width: 80%; /* Устанавливаем ширину поля */
+    max-width: 400px; /* Максимальная ширина поля */
+    padding: 10px;
+    margin: 0 auto; /* Центрируем по горизонтали */
+    display: block; /* Для центрирования через margin: 0 auto */
+    font-size: 1rem;
+    border: 2px solid #d0bc6e;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+/* Стиль при фокусе на поле */
+input[type="text"]:focus {
+    border-color: #a58f4d;
+    box-shadow: 0 0 5px rgba(165, 143, 77, 0.6);
+}
+
+/* Стиль для кнопки подтверждения */
+.confirm-btn {
+    padding: 10px 20px;
+    background-color: #d0bc6e;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+/* Стиль кнопки при наведении */
+.confirm-btn:hover {
+    background-color: #a58f4d;
+}
+
+/* Стиль для скрытого сообщения */
+#confirmation-message.hidden {
+    display: none;
+}
+
+/* Стиль для кнопки отмены */
+.cancel-btn {
+    padding: 10px 20px;
+    background-color: #e8e8e8;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    margin-top: 10px;
+    transition: background-color 0.3s ease;
+}
+
+/* Стиль кнопки отмены при наведении */
+.cancel-btn:hover {
+    background-color: #d0d0d0;
+}
+
+.info {
+    text-align: center;
+    margin: 20px 0;
+    padding: 15px;
+    background-color: #2e2e2e;  /* Фон, гармонирующий с меню */
+    border-radius: 10px;
+}
+
+.info h2 {
+    font-family: 'TildaSans-R', sans-serif;
+    font-size: 22px;
+    color: #d0bc6e;          /* Цвет заголовка */
+    margin-bottom: 10px;
+}
+
+.info p {
+    font-family: 'TildaSans-R', sans-serif;
+    font-size: 18px;
+    color: #ffffff;
+    margin-bottom: 10px;     /* Плотное межстрочное расстояние, как в дресс-коде */
+    line-height: 1.2;
+}
+
 @media screen and (max-width: 768px) {
     body {
         padding: 0 10px;
@@ -114,6 +557,5 @@
     .event .details {
         font-size: 16px;
     }
-}
 
 
