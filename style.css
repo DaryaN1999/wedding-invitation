@@ -448,6 +448,7 @@ input[type="text"]:focus {
 @media screen and (max-width: 768px) {
     body {
         padding: 0 10px;
+        overflow-x: hidden;
     }
 
     .hero h1 {
@@ -561,5 +562,9 @@ input[type="text"]:focus {
     .event .details {
         font-size: 16px;
     }
-
+.container {
+    max-width: 100%;
+    width: 90%;
+    margin: 0 auto;
+}
 
