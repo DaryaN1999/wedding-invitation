@@ -665,8 +665,26 @@ input[type="text"]:focus {
     .menu h2 {
         font-size: 20px;
     }
+    /* Уберите или закомментируйте медиазапросы */
+@media screen and (max-width: 768px) {
+    /* Ваши медиазапросы, которые изменяют стили */
+}
 
     .menu p {
         font-size: 16px;
     }
+}
+body {
+    width: 1024px; /* Устанавливаем фиксированную ширину */
+    margin: 0 auto; /* Центрируем */
+}
+
+.hero, .menu, .survey {
+    width: 1024px;
+    margin: 0 auto;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
 }
