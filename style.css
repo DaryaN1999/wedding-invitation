@@ -39,7 +39,7 @@ body {
 .wedding-title {
     font-family: 'TildaSans-R', serif; /* Подключаем шрифт */
     font-weight: normal; /* Легкий шрифт */
-    font-size: 60px; /* Размер */
+    font-size: 70px; /* Размер */
     letter-spacing: 15px; /* Немного увеличим расстояние между буквами */
     color: #d0bc6e; /* Цвет желтый */
     text-align: center;
@@ -148,14 +148,14 @@ h1, h2, h3 {
 }
 
 .number {
-    font-size: 55px !important; /* Большие цифры */
+    font-size: 70px !important; /* Большие цифры */
     font-weight: normal;
     color: #d0bc6e;
     margin-bottom: 5px; /* Отступ между цифрой и текстом */
 }
 
 .text {
-    font-size: 15px !important; /* Уменьшаем текст под цифрами */
+    font-size: 25px !important; /* Уменьшаем текст под цифрами */
     color: #d0bc6e;
     line-height: 1; /* Межстрочный интервал */
     margin-top: 5px; /* Отступ от цифры */
@@ -631,73 +631,9 @@ input[type="text"]:focus {
     .menu h2 {
         font-size: 20px;
     }
-    /* Уберите или закомментируйте медиазапросы */
-@media screen and (max-width: 768px) {
-    /* Ваши медиазапросы, которые изменяют стили */
-}
 
     .menu p {
         font-size: 16px;
-    }
-}
-body {
-    width: 1024px; /* Устанавливаем фиксированную ширину */
-    margin: 0 auto; /* Центрируем */
-}
-
-.hero, .menu, .survey {
-    width: 1024px;
-    margin: 0 auto;
-}
-/* Для секции расписания */
-# wedding-schedule {
-    max-width: 1024px; /* Ограничиваем ширину для секции */
-    margin: 0 auto; /* Центрируем */
-    padding: 20px; /* Добавляем отступы для лучшего отображения */
-}
-
-/* Для каждого события */
-.schedule .event {
-    display: flex; /* Используем flexbox для выравнивания */
-    justify-content: space-between; /* Разделяем время и детали на обе стороны */
-    margin-bottom: 20px; /* Добавляем отступы между событиями */
-}
-
-/* Время */
-.schedule .event .time {
-    width: 120px; /* Фиксируем ширину времени */
-    text-align: center; /* Центрируем время */
-    font-size: 16px;
-}
-
-/* Детали события */
-.schedule .event .details {
-    flex-grow: 1; /* Позволяет разделу details расширяться */
-    margin-left: 20px; /* Отступ между временем и деталями */
-    font-size: 16px;
-    line-height: 1.5;
-}
-
-/* Обработка длинных адресов */
-.schedule .event .address {
-    font-size: 14px;
-    color: #888;
-}
-
-/* Для адаптации на мобильных устройствах (если нужно сделать изменения) */
-@media screen and (max-width: 768px) {
-    .schedule .event {
-        flex-direction: column; /* На мобильных устройствах выводим элементы по вертикали */
-        text-align: center; /* Центрируем текст */
-    }
-
-    .schedule .event .time {
-        width: 100%; /* Время занимает всю строку */
-        margin-bottom: 10px; /* Отступ от текста */
-    }
-
-    .schedule .event .details {
-        width: 100%; /* Детали также занимают всю ширину */
     }
 }
 
