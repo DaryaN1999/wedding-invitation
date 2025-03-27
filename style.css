@@ -466,7 +466,6 @@ input[type="text"]:focus {
 
  .hero {
         display: flex;
-        flex-wrap: wrap; /* Чтобы элементы могли располагаться друг под другом, если не помещаются */
         justify-content: space-between;
         align-items: center;
     }
