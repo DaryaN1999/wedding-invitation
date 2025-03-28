@@ -15,7 +15,6 @@ document.addEventListener("DOMContentLoaded", function() {
     });
 });
 
-
 // Получаем элементы
 const nameInput = document.getElementById('guestName');
 const confirmButton = document.getElementById('confirm-button');
@@ -83,7 +82,7 @@ document.getElementById('confirm-button')?.addEventListener('click', function() 
     }
 
     // Обновляем сообщение благодарности с именем
-    thankYouMessage.innerHTML = Спасибо, ${name}, что подтвердили свое присутствие!<br>Дмитрий и Дарья уже оповещены об этом ;);
+    thankYouMessage.innerHTML = `Спасибо, ${name}, что подтвердили свое присутствие!<br>Дмитрий и Дарья уже оповещены об этом ;)`;
 
     // Показываем окно с благодарностью
     messageBox?.classList.remove('hidden');
