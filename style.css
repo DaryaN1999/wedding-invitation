@@ -440,15 +440,40 @@ input[type="text"]:focus {
     /* Отключаем адаптацию под мобильные устройства */
 @media screen and (max-width: 768px) {
     .photo-grid {
-        display: flex; /* Меняем grid на flex */
-        flex-wrap: nowrap; /* Запрещаем перенос */
-        justify-content: center; /* Центрируем */
-        gap: 10px;
+        display: flex; /* Используем flexbox */
+        flex-wrap: nowrap; /* Запрещаем перенос элементов */
+        justify-content: center; /* Центрируем по горизонтали */
+        gap: 15px; /* Небольшой отступ между фото */
     }
 
     .photo-grid img {
-        max-width: 50%; /* Чтобы оба элемента были равными */
+        width: 45%; /* Чтобы оба фото были равномерными */
+        max-width: none; /* Убираем ограничение ширины */
         height: auto;
+    }
+
+    .hero h1 {
+        font-size: 40px; /* Уменьшаем размер заголовка */
+    }
+
+    .hero h3 {
+        font-size: 20px; /* Немного уменьшаем текст */
+    }
+
+    .countdown {
+        flex-wrap: nowrap; /* Запрещаем перенос таймера */
+    }
+
+    .countdown-item {
+        min-width: 80px; /* Фиксированная ширина для всех элементов */
+    }
+
+    .survey {
+        max-width: 90%; /* Немного сжимаем анкету для лучшего вида */
+    }
+
+    .quote-section blockquote {
+        font-size: 20px; /* Уменьшаем размер цитаты */
     }
 }
 
