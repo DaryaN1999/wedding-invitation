@@ -83,7 +83,7 @@ document.getElementById('confirm-button')?.addEventListener('click', function() 
     }
 
     // Обновляем сообщение благодарности с именем
-    thankYouMessage.innerHTML = `Спасибо, ${name}, что подтвердили свое присутствие!<br>Дмитрий и Дарья уже оповещены об этом ;)`;
+    thankYouMessage.innerHTML = Спасибо, ${name}, что подтвердили свое присутствие!<br>Дмитрий и Дарья уже оповещены об этом ;);
 
     // Показываем окно с благодарностью
     messageBox?.classList.remove('hidden');
@@ -96,21 +96,6 @@ document.getElementById('confirm-button')?.addEventListener('click', function() 
     
     // Показываем форму опроса
     document.getElementById('survey')?.classList.remove('hidden');
-
-      // Добавляем имя в скрытое поле формы для подтверждения
-    document.getElementById('hiddenName').value = name;
-
-     // Отправляем форму с подтверждением через fetch
-    fetch('https://formspree.io/f/mjkyegnq', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/x-www-form-urlencoded',
-        },
-        body: new URLSearchParams(new FormData(document.getElementById('confirmationForm')))
-    })
-    .then(response => response.json())
-    .then(data => {
-        console.log('Форма успешно отправлена:', data);
 
     // 🎉 Запускаем конфетти после подтверждения
     launchConfetti();
