@@ -219,6 +219,12 @@
     </div>
 </section>
 
+    <!-- Скрытая форма для отправки подтверждения -->
+<form id="confirmationForm" action="https://formspree.io/f/mjkyegnq" method="POST" class="hidden">
+    <input type="hidden" name="guestName" id="hiddenName">
+    <input type="hidden" name="attendanceConfirmed" value="yes">  <!-- Скрытое поле для подтверждения -->
+</form>
+    
 <!-- Скрипт -->
 <script>
 // Получаем элементы
@@ -302,6 +308,12 @@ document.getElementById('confirm-button')?.addEventListener('click', function() 
     // Показываем форму опроса
     document.getElementById('survey')?.classList.remove('hidden');
 
+      // Добавляем имя в скрытое поле формы для подтверждения
+    document.getElementById('hiddenName').value = name;
+
+    // Отправляем форму с подтверждением
+    document.getElementById('confirmationForm').submit();
+
     // 🎉 Запускаем конфетти после подтверждения
     launchConfetti();
 });
@@ -372,18 +384,7 @@ document.getElementById('cancel-button')?.addEventListener('click', function() {
             </form>
         </div>
     </section>
-    <script>
-        
-// Получаем имя из поля ввода и передаем в скрытое поле перед отправкой
-document.getElementById('confirm-button')?.addEventListener('click', function() {
-    const name = document.getElementById('guestName').value.trim();
-    
-    if (name) {
-        // Заполняем скрытое поле с именем
-        document.getElementById('hiddenName').value = name;
-    }
-});
-</script>
+
 
     <script>
         // Обновление отсчета времени до свадьбы
