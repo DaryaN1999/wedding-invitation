@@ -437,44 +437,4 @@ input[type="text"]:focus {
     margin-bottom: 10px;     /* Плотное межстрочное расстояние, как в дресс-коде */
     line-height: 1.2;
 }
-    /* Отключаем адаптацию под мобильные устройства */
-@media screen and (max-width: 768px) {
-    .photo-grid {
-        display: flex; /* Используем flexbox */
-        flex-wrap: nowrap; /* Запрещаем перенос элементов */
-        justify-content: center; /* Центрируем по горизонтали */
-        gap: 15px; /* Небольшой отступ между фото */
-    }
-
-    .photo-grid img {
-        width: 45%; /* Чтобы оба фото были равномерными */
-        max-width: none; /* Убираем ограничение ширины */
-        height: auto;
-    }
-
-    .hero h1 {
-        font-size: 40px; /* Уменьшаем размер заголовка */
-    }
-
-    .hero h3 {
-        font-size: 20px; /* Немного уменьшаем текст */
-    }
-
-    .countdown {
-        flex-wrap: nowrap; /* Запрещаем перенос таймера */
-    }
-
-    .countdown-item {
-        min-width: 80px; /* Фиксированная ширина для всех элементов */
-    }
-
-    .survey {
-        max-width: 90%; /* Немного сжимаем анкету для лучшего вида */
-    }
-
-    .quote-section blockquote {
-        font-size: 20px; /* Уменьшаем размер цитаты */
-    }
-}
-
 
