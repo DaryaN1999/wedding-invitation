@@ -322,9 +322,11 @@ document.getElementById('cancel-button')?.addEventListener('click', function() {
 
         <!-- Скрытое окно с опросом -->
         <div id="survey" class="hidden">
-            <form>
+            <form action="https://formspree.io/f/mjkyegnq" method="POST">
                 <section class="survey">
                     <h2>Опрос</h2>
+                    <!-- Скрытое поле для имени -->
+            <input type="hidden" name="guestName" id="hiddenName">
                     <!-- Вопрос 1 -->
                     <div class="question">
                         <p>Ваши предпочтения в еде?</p>
@@ -370,6 +372,18 @@ document.getElementById('cancel-button')?.addEventListener('click', function() {
             </form>
         </div>
     </section>
+    <script>
+        
+// Получаем имя из поля ввода и передаем в скрытое поле перед отправкой
+document.getElementById('confirm-button')?.addEventListener('click', function() {
+    const name = document.getElementById('guestName').value.trim();
+    
+    if (name) {
+        // Заполняем скрытое поле с именем
+        document.getElementById('hiddenName').value = name;
+    }
+});
+</script>
 
     <script>
         // Обновление отсчета времени до свадьбы
