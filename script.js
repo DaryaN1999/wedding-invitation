@@ -97,6 +97,9 @@ document.getElementById('confirm-button')?.addEventListener('click', function() 
     // Показываем форму опроса
     document.getElementById('survey')?.classList.remove('hidden');
 
+    // Добавляем имя в скрытое поле формы для опроса
+    document.getElementById('hiddenName').value = name;
+
     // 🎉 Запускаем конфетти после подтверждения
     launchConfetti();
 });
@@ -114,14 +117,6 @@ document.getElementById('cancel-button')?.addEventListener('click', function() {
     confirmButton.classList.remove('hidden');
 });
 
-document.getElementById('confirm-button')?.addEventListener('click', function() {
-    const name = document.getElementById('guestName').value.trim();
-    
-    if (name) {
-        // Заполняем скрытое поле с именем
-        document.getElementById('hiddenName').value = name;
-    }
-});
 
 // Обновление отсчета времени до свадьбы
 function updateCountdown() {
