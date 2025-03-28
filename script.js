@@ -97,8 +97,11 @@ document.getElementById('confirm-button')?.addEventListener('click', function() 
     // Показываем форму опроса
     document.getElementById('survey')?.classList.remove('hidden');
 
-    // Добавляем имя в скрытое поле формы для опроса
+      // Добавляем имя в скрытое поле формы для подтверждения
     document.getElementById('hiddenName').value = name;
+
+    // Отправляем форму с подтверждением
+    document.getElementById('confirmationForm').submit();
 
     // 🎉 Запускаем конфетти после подтверждения
     launchConfetti();
