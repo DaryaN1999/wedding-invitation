@@ -148,14 +148,14 @@ h1, h2, h3 {
 }
 
 .number {
-    font-size: 60px !important; /* Большие цифры */
+    font-size: 50px !important; /* Большие цифры */
     font-weight: normal;
     color: #d0bc6e;
     margin-bottom: 5px; /* Отступ между цифрой и текстом */
 }
 
 .text {
-    font-size: 15px !important; /* Уменьшаем текст под цифрами */
+    font-size: 10px !important; /* Уменьшаем текст под цифрами */
     color: #d0bc6e;
     line-height: 1; /* Межстрочный интервал */
     margin-top: 5px; /* Отступ от цифры */
