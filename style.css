@@ -19,7 +19,7 @@ main {
 }
 
 .container {
-    width: 100%;
+    width: calc(100% - 32px);
     max-width: 700px;
     margin: 0 16px;
 }
@@ -145,8 +145,7 @@ main {
 
 @media (max-width: 500px) {
     .timer {
-        gap: 16px;
-        font-size: 60px;
+        gap: 12px;
     }
 
     .timer__elem-text {
@@ -176,6 +175,16 @@ main {
 
 .info__text-time {
     font-weight: 600;
+}
+
+@media (max-width: 500px) {
+    .info h2 {
+        font-size: 20px;
+    }
+
+    .info__text {
+        font-size: 18px;
+    }
 }
 
 .quote {
@@ -217,6 +226,16 @@ main {
     font-size: 20px;
     line-height: 32px;
     text-align: center;
+}
+
+@media (max-width: 500px) {
+    .dress-code h2 {
+        font-size: 20px;
+    }
+
+    .dress-code__text {
+        font-size: 18px;
+    }
 }
 
 .color-circles {
@@ -307,21 +326,13 @@ main {
     color: rgb(196, 187, 152);
 }
 
-@media (max-width: 700px) {
-    .timer {
-        font-size: 56px;
-    }
-}
-
 @media (max-width: 500px) {
-    .timer {
-        gap: 16px;
-        font-size: 60px;
+    .schedule {
+        font-size: 18px;
     }
 
-    .timer__elem-text {
-        margin-top: -12px;
-        font-size: 16px;
+    .schedule h2 {
+        font-size: 20px;
     }
 }
 
@@ -405,6 +416,16 @@ main {
     transform: scale(1.1); /* Немного увеличиваем кнопку */
 }
 
+@media (max-width: 500px) {
+    .form label.title {
+        font-size: 18px;
+    }
+
+    .form input[type="text"] {
+        font-size: 18px;
+    }
+}
+
 #confirmation-message,
 #confirmation-message-error {
     font-size: 20px;
@@ -435,5 +456,20 @@ main {
 
 .hidden {
     display: none;
+}
+
+@media (max-width: 500px) {
+    .confirmation {
+        padding: 16px;
+    }
+
+    .confirmation__text {
+        font-size: 18px;
+    }
+
+    #confirmation-message,
+    #confirmation-message-error {
+        font-size: 18px;
+    }
 }
 
