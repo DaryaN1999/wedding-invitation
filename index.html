@@ -333,7 +333,7 @@ confirmButton?.addEventListener('click', function(e) {
         headers: {
             'Accept': 'application/json'
         },
-        body: new URLSearchParams(new FormData(form))
+         body: new URLSearchParams(new FormData(document.getElementById('form')))
     })
         .then(() => {
             // Показываем окно с благодарностью
