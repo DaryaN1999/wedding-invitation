@@ -184,6 +184,7 @@ main {
 
     .info__text {
         font-size: 18px;
+        line-height: 28px;
     }
 }
 
@@ -235,6 +236,7 @@ main {
 
     .dress-code__text {
         font-size: 18px;
+        line-height: 28px;
     }
 }
 
@@ -329,6 +331,7 @@ main {
 @media (max-width: 500px) {
     .schedule {
         font-size: 18px;
+        line-height: 28px;
     }
 
     .schedule h2 {
@@ -358,7 +361,7 @@ main {
     padding: 4px 0;
     color: #ddd;
     font-size: 18px;
-    line-height: 24px;
+    line-height: 28px;
     cursor: pointer;
 }
 
@@ -419,10 +422,12 @@ main {
 @media (max-width: 500px) {
     .form label.title {
         font-size: 18px;
+        line-height: 28px;
     }
 
     .form input[type="text"] {
         font-size: 18px;
+        line-height: 28px;
     }
 }
 
@@ -465,11 +470,13 @@ main {
 
     .confirmation__text {
         font-size: 18px;
+        line-height: 28px;
     }
 
     #confirmation-message,
     #confirmation-message-error {
         font-size: 18px;
+        line-height: 28px;
     }
 }
 
