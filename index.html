@@ -127,7 +127,7 @@
         <div class="info confirmation">
             <h2>Подтверждение</h2>
 
-            <form class="form">
+            <form id="form" class="form">
                 <div class="confirmation__text">
                     Пожалуйста, подтвердите свое присутствие до 01.08.2025
                 </div>
@@ -186,6 +186,15 @@
                     Спасибо, что подтвердили свое присутствие!
                     <br>
                     Дмитрий и Дарья уже оповещены об этом ;)
+                </div>
+            </div>
+
+            <!-- Сообщение благодарности -->
+            <div id="confirmation-message-error" class="hidden">
+                <div>
+                    Что-то пошло не так!
+                    <br>
+                    Напиши нам в личку.
                 </div>
             </div>
         </div>
@@ -304,8 +313,8 @@ confirmButton?.addEventListener('click', function(e) {
 
     const name = nameInput.value.trim();
     const messageBox = document.getElementById("confirmation-message");
+    const messageBoxError = document.getElementById("confirmation-message-error");
     const form = document.getElementsByClassName("form");
-    console.log(form)
     const thankYouMessage = messageBox?.querySelector("div");
 
     // Если имя не введено, подсвечиваем поле ввода красным
@@ -318,14 +327,28 @@ confirmButton?.addEventListener('click', function(e) {
     // Обновляем сообщение благодарности с именем
     thankYouMessage.innerHTML = `Спасибо, ${name}, что подтвердили свое присутствие!<br>Дмитрий и Дарья уже оповещены об этом ;)`;
 
-    // Показываем окно с благодарностью
-    messageBox?.classList.remove('hidden');
-    
-    // Скрываем форму
-    form?.[0].classList.add('hidden');
+    // Отправляем форму с подтверждением через fetch
+    fetch('https://formspree.io/f/xpwpjlnq', {
+        method: 'POST',
+        headers: {
+            'Accept': 'application/json'
+        },
+        body: new URLSearchParams(new FormData(document.getElementById('form')))
+    })
+        .then(() => {
+            // Показываем окно с благодарностью
+            messageBox?.classList.remove('hidden');
 
-    // 🎉 Запускаем конфетти после подтверждения
-    launchConfetti();
+            // Скрываем форму
+            form?.[0].classList.add('hidden');
+
+            // 🎉 Запускаем конфетти после подтверждения
+            launchConfetti();
+        })
+        .catch(() => {
+            form?.[0].classList.add('hidden');
+            messageBoxError?.classList.remove('hidden');
+        });
 });
 </script>
 

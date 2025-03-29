@@ -405,8 +405,8 @@ main {
     transform: scale(1.1); /* Немного увеличиваем кнопку */
 }
 
-#confirmation-message {
-    padding: 32px 0 0;
+#confirmation-message,
+#confirmation-message-error {
     font-size: 20px;
     text-align: center;
 }
