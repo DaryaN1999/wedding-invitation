@@ -71,138 +71,175 @@
         </div>
     </div>
 
-    </section>
-
-    <section class="info">
-        <h2>Дорогой Гость!</h2>
-        <p>Мы рады сообщить Вам, что
-            30.08.2025 состоится самое </p>
-        <p>главное торжество в нашей жизни -
-            день нашей свадьбы!</p>
-        <p>Приглашаем Вас разделить с нами
-            радость этого незабываемого дня.</p>
-        <h3 style="color: #ffffff;">30.08.2025 в 16:30</h3>
-    </section>
-
-    <section class="quote-section">
-        <img src="wedding-photo.jpg" alt="Фото пары" class="quote-photo fadeIn">
-        <blockquote>
-            "Любить - значит вместе смотреть в одном<br>направлении!"
-        </blockquote>
-    </section>
-
-    <section class="menu">
-        <h2>Меню</h2>
-        <p>Меню разнообразно, поэтому сообщите нам заранее,</p>
-        <p>если у Вас есть
-            какие-либо предпочтения или диетические ограничения.
-        <p>После подтверждения вы сможете пройти опрос</p>
-        <p> о своих вкусовых предпочтениях и напитках.</p>
-    </section>
-
-    <!-- Секция дресс-кода -->
-    <section class="dress-code">
-        <h2>Дресс-код на свадьбе</h2>
-        <p>Мы хотим, чтобы наш особенный день</p>
-        <p>был не только прекрасным, но и гармоничным.</p>
-        <p>Просим всех гостей выбрать наряды в пастельных тонах,
-        <p>чтобы создать атмосферу нежности и утонченности.</p>
-        <p>Пусть каждый из Вас почувствует себя частью</p>
-        <p>этой красоты и радости!
-        </p>
-        <div class="color-circles">
-            <div class="color-circle color1"></div>
-            <div class="color-circle color2"></div>
-            <div class="color-circle color3"></div>
-            <div class="color-circle color4"></div>
-            <div class="color-circle color5"></div>
-        </div>
-    </section>
-
-
-    <section class="confirmation">
-        <h2>Подтверждение</h2>
-        <p>Пожалуйста, подтвердите свое присутствие до 01.08.2025</p>
-        <h2>Ждём Вас!</h2>
-        <label for="guestName">Ваше имя:</label>
-        <input type="text" id="guestName" name="guestName" required>
-        <p><button id="confirm-button" class="confirm-btn">Подтвердить</button></p>
-
-        <!-- Сообщение благодарности -->
-        <div id="confirmation-message" class="hidden">
-            <p>Спасибо, что подтвердили свое присутствие!<br>Дмитрий и Дарья уже оповещены об этом ;)</p>
-            <button id="cancel-button" class="cancel-btn">Отменить подтверждение</button>
-        </div>
-    </section>
-
-    <!-- Скрытое окно с опросом -->
-    <div id="survey" class="hidden">
-        <section class="survey">
-            <h2>Опрос</h2>
-            <!-- Вопрос 1 -->
-            <div class="question">
-                <p>Ваши предпочтения в еде?</p>
-                <label>
-                    <input type="radio" name="food" value="no"> Нет
-                </label>
-                <label>
-                    <input type="radio" name="food" value="no eat meat"> Не ем мясо
-                </label>
-                <label>
-                    <input type="radio" name="food" value="no eat fish"> Не ем рыбу
-                </label>
-                <label>
-                    <input type="radio" name="food" value="vegetarian"> Вегетарианец
-                </label>
+    <div class="container">
+        <div class="info">
+            <h2>Дорогой Гость!</h2>
+            <div class="info__text">
+                Мы рады сообщить Вам, что 30.08.2025 состоится самое главное
+                торжество в нашей жизни - день нашей свадьбы!
+                Приглашаем Вас разделить с нами радость этого незабываемого дня.
             </div>
-
-            <!-- Вопрос 2 -->
-            <div class="question">
-                <p>Ваши предпочтения в алкоголе?</p>
-                <label>
-                    <input type="radio" name="alcohol" value="wine_white"> Вино белое
-                </label>
-                <label>
-                    <input type="radio" name="alcohol" value="wine_red"> Вино красное
-                </label>
-                <label>
-                    <input type="radio" name="alcohol" value="champagne"> Шампанское
-                </label>
-                <label>
-                    <input type="radio" name="alcohol" value="whisky"> Виски
-                </label>
-                <label>
-                    <input type="radio" name="alcohol" value="vodka"> Водка
-                </label>
-                <label>
-                    <input type="radio" name="alcohol" value="none"> Не буду пить алкоголь
-                </label>
-            </div>
-
-            <button type="submit">Отправить</button>
-        </section>
-        </form>
+            <div class="info__text info__text-time">30.08.2025 в 16:30</div>
+        </div>
     </div>
-    </section>
 
-    <!-- Свадебное расписание -->
-    <section id="wedding-schedule" class="schedule">
-        <h2>Свадебное расписание</h2>
-        <div class="event">
-            <div class="time">16:30<br>30.08.2025</div>
-            <div class="details"><strong>Сбор гостей. Фуршет<br>Энергетиков, 50а</strong><br><span class="address">Приглашаем вас разделить вместе с нами
-                радость создания новой семьи.</span></div>
+    <div class="container quote">
+        <img src="wedding-photo.jpg" alt="Фото пары" class="quote__photo fadeIn">
+        <div class="quote__text">
+            "Любить - значит вместе смотреть в одном направлении!"
         </div>
-        <div class="event">
-            <div class="time">17:00<br>30.08.2025</div>
-            <div class="details"><strong>Церемония</strong><br><span class="address">Вы станете свидетелями трогательного момента.
-                Приготовьте платочки.</span></div>
+    </div>
+
+    <div class="container">
+        <div class="info">
+            <h2>Меню</h2>
+            <div class="info__text">
+                Меню разнообразно, поэтому сообщите нам заранее,
+                если у Вас есть какие-либо предпочтения или диетические ограничения.
+                Пройдите небольшой опрос о своих вкусовых предпочтениях и напитках
+                при подтверждении своего присутствия.
+            </div>
         </div>
-        <div class="event">
-            <div class="time">18:00<br>30.08.2025</div>
-            <div class="details"><strong>Банкет</strong><br><span class="address">Время вкусной еды, танцев и развлечений!</span></div>
+    </div>
+
+    <div class="container">
+        <div class="dress-code">
+            <h2>Дресс-код на свадьбе</h2>
+            <div class="dress-code__text">
+                Мы хотим, чтобы наш особенный день
+                был не только прекрасным, но и гармоничным.
+                Просим всех гостей выбрать наряды в пастельных тонах,
+                чтобы создать атмосферу нежности и утонченности.
+                Пусть каждый из Вас почувствует себя частью
+                этой красоты и радости!
+            </div>
+            <div class="color-circles">
+                <div class="color-circle color1"></div>
+                <div class="color-circle color2"></div>
+                <div class="color-circle color3"></div>
+                <div class="color-circle color4"></div>
+                <div class="color-circle color5"></div>
+            </div>
         </div>
-    </section>
+    </div>
+
+    <div class="container">
+        <div class="info confirmation">
+            <h2>Подтверждение</h2>
+
+            <form class="form">
+                <div class="confirmation__text">
+                    Пожалуйста, подтвердите свое присутствие до 01.08.2025
+                </div>
+
+                <div class="form__elem">
+                    <label for="guestName" class="title">
+                        Ваше имя:
+                    </label>
+                    <input type="text" id="guestName" name="guestName" required>
+                </div>
+
+                <div class="form__elem">
+                    <label class="title title--radio">Ваши предпочтение в еде?</label>
+                    <label>
+                        <input type="radio" name="food" value="no"> Нет
+                    </label>
+                    <label>
+                        <input type="radio" name="food" value="no eat meat"> Не ем мясо
+                    </label>
+                    <label>
+                        <input type="radio" name="food" value="no eat fish"> Не ем рыбу
+                    </label>
+                    <label>
+                        <input type="radio" name="food" value="vegetarian"> Вегетарианец
+                    </label>
+                </div>
+
+                <div class="form__elem">
+                    <label class="title title--radio">Ваши предпочтение в алкоголе?</label>
+                    <label>
+                        <input type="radio" name="alcohol" value="wine_white"> Вино белое
+                    </label>
+                    <label>
+                        <input type="radio" name="alcohol" value="wine_red"> Вино красное
+                    </label>
+                    <label>
+                        <input type="radio" name="alcohol" value="champagne"> Шампанское
+                    </label>
+                    <label>
+                        <input type="radio" name="alcohol" value="whisky"> Виски
+                    </label>
+                    <label>
+                        <input type="radio" name="alcohol" value="vodka"> Водка
+                    </label>
+                    <label>
+                        <input type="radio" name="alcohol" value="none"> Не буду пить алкоголь
+                    </label>
+                </div>
+
+                <button id="confirm-button">Отправить</button>
+            </form>
+
+            <!-- Сообщение благодарности -->
+            <div id="confirmation-message" class="hidden">
+                <div>
+                    Спасибо, что подтвердили свое присутствие!
+                    <br>
+                    Дмитрий и Дарья уже оповещены об этом ;)
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="schedule">
+        <div class="container schedule__container">
+            <h2>Свадебное расписание</h2>
+            <div class="schedule__elem">
+                <div class="schedule__time">
+                    16:30
+                    <br>
+                    30.08.2025
+                </div>
+                <div class="schedule__details">
+                    <strong>Сбор гостей. Фуршет<br>Энергетиков, 50а</strong>
+                    <br>
+                    <div class="schedule__description">
+                        Приглашаем вас разделить вместе с нами
+                        радость создания новой семьи.
+                    </div>
+                </div>
+            </div>
+            <div class="schedule__elem">
+                <div class="schedule__time">
+                    17:00
+                    <br>
+                    30.08.2025
+                </div>
+                <div class="schedule__details">
+                    <strong>Церемония</strong>
+                    <br>
+                    <div class="schedule__description">
+                        Вы станете свидетелями трогательного момента.
+                        Приготовьте платочки.
+                    </div>
+                </div>
+            </div>
+            <div class="schedule__elem">
+                <div class="schedule__time">
+                    18:00
+                    <br>
+                    30.08.2025
+                </div>
+                <div class="schedule__details">
+                    <strong>Банкет</strong>
+                    <br>
+                    <div class="schedule__description">
+                        Время вкусной еды, танцев и развлечений!
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </main>
 
     
@@ -217,11 +254,11 @@ nameInput.addEventListener('input', function() {
     if (nameInput.value.trim() === "") {
         nameInput.setAttribute('placeholder', 'Пожалуйста, введите ваше имя');  // Меняем текст placeholder
         nameInput.style.borderColor = 'red';  // Красная рамка
-        confirmButton.disabled = true;      // Делаем кнопку неактивной
+        confirmButton.disabled = true;  // Делаем кнопку неактивной
     } else {
         nameInput.setAttribute('placeholder', 'Введите ваше имя');  // Восстанавливаем исходный текст placeholder
         nameInput.style.borderColor = '';  // Сбрасываем красную рамку
-        confirmButton.disabled = false;     // Активируем кнопку
+        confirmButton.disabled = false;  // Активируем кнопку
     }
 });
 
@@ -262,10 +299,14 @@ function launchConfetti() {
 }
 
 // Логика для подтверждения
-document.getElementById('confirm-button')?.addEventListener('click', function() {
-    let name = nameInput.value.trim();
-    let messageBox = document.getElementById("confirmation-message");
-    let thankYouMessage = messageBox?.querySelector("p");
+confirmButton?.addEventListener('click', function(e) {
+    e.preventDefault();
+
+    const name = nameInput.value.trim();
+    const messageBox = document.getElementById("confirmation-message");
+    const form = document.getElementsByClassName("form");
+    console.log(form)
+    const thankYouMessage = messageBox?.querySelector("div");
 
     // Если имя не введено, подсвечиваем поле ввода красным
     if (!name) {
@@ -280,56 +321,36 @@ document.getElementById('confirm-button')?.addEventListener('click', function() 
     // Показываем окно с благодарностью
     messageBox?.classList.remove('hidden');
     
-    // Показываем кнопку отмены подтверждения
-    document.getElementById('cancel-button')?.classList.remove('hidden');
-    
-    // Скрываем кнопку подтверждения
-    confirmButton.classList.add('hidden');
-    
-    // Показываем форму опроса
-    document.getElementById('survey')?.classList.remove('hidden');
+    // Скрываем форму
+    form?.[0].classList.add('hidden');
 
     // 🎉 Запускаем конфетти после подтверждения
     launchConfetti();
 });
-
-// Логика для отмены подтверждения
-document.getElementById('cancel-button')?.addEventListener('click', function() {
-    // Скрываем окно с благодарностью и форму опроса
-    document.getElementById('confirmation-message')?.classList.add('hidden');
-    document.getElementById('survey')?.classList.add('hidden');
-    
-    // Скрываем кнопку отмены подтверждения
-    document.getElementById('cancel-button')?.classList.add('hidden');
-    
-    // Показываем кнопку подтверждения
-    confirmButton.classList.remove('hidden');
-});
 </script>
 
+<script>
+    // Обновление отсчета времени до свадьбы
+    function updateCountdown() {
+        const weddingDate = new Date("2025-08-30T16:30:00");
+        const now = new Date();
+        const timeLeft = weddingDate - now;
 
-    <script>
-        // Обновление отсчета времени до свадьбы
-        function updateCountdown() {
-            var weddingDate = new Date("2025-08-30T16:30:00");
-            var now = new Date();
-            var timeLeft = weddingDate - now;
+        const weeks = Math.floor(timeLeft / (1000 * 60 * 60 * 24 * 7));
+        const days = Math.floor((timeLeft % (1000 * 60 * 60 * 24 * 7)) / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
 
-            var weeks = Math.floor(timeLeft / (1000 * 60 * 60 * 24 * 7));
-            var days = Math.floor((timeLeft % (1000 * 60 * 60 * 24 * 7)) / (1000 * 60 * 60 * 24));
-            var hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-            var minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
-            var seconds = Math.floor((timeLeft % (1000 * 60)) / 1000);
+        document.getElementById('weeks').innerText = String(weeks).padStart(2, '0');
+        document.getElementById('days').innerText = String(days).padStart(2, '0');
+        document.getElementById('hours').innerText = String(hours).padStart(2, '0');
+        document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
+        document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
+    }
 
-            document.getElementById('weeks').innerText = String(weeks).padStart(2, '0');
-            document.getElementById('days').innerText = String(days).padStart(2, '0');
-            document.getElementById('hours').innerText = String(hours).padStart(2, '0');
-            document.getElementById('minutes').innerText = String(minutes).padStart(2, '0');
-            document.getElementById('seconds').innerText = String(seconds).padStart(2, '0');
-        }
-
-        setInterval(updateCountdown, 1000);
-    </script>
+    setInterval(updateCountdown, 1000);
+</script>
 
 </body>
 </html>
